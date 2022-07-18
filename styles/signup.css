@@ -1,0 +1,136 @@
+main{
+    
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    
+    background-image:
+    linear-gradient(255deg, rgba(18,19,30,0.9) 100%, rgba(18,19,30,.8) 30%),
+    url("../images/space-galaxy-background.jpg");
+    background-size: cover;
+}
+#sign-up{
+    position: relative;
+    padding: 0 48px;
+    width: 100%;
+    height: 89vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+}
+
+.sign-up-text h3{
+    color: var(--g-dark);
+    font-size: var(--n-s);
+    font-weight: var(--b-w);
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    margin-bottom: 8px;
+}
+.sign-up-text h1{
+    font-size: var(--v-s);
+    font-weight: var(--b-w);
+}
+.sign-up-text h1 span{
+    font-weight: var(--h-w);
+    color: var(--teal);
+}
+.sign-up-form form{
+    display: grid;
+    grid-template-columns: repeat(2,220px);
+    column-gap: 10px;
+    row-gap: 16px;
+    column-gap: 16px;
+}
+input{
+    width: 100%;
+}
+.floating-label{
+    position: absolute;
+    font-size: var(--n-s);
+    font-weight: var(--t-w);
+    opacity: 0.75;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    transition: transform ease 140ms,font-size ease-out 120ms,position ease 140ms;
+    user-select: none;
+    pointer-events: none;
+}
+input.input:focus ~ .floating-label,
+input.input:not(:focus):valid ~ .floating-label{
+    font-size: 10px;
+    transform: translateY(-180%);
+    left: 24px;
+}
+img.icon{
+    position: absolute;
+    width: 18px;
+    top: 50%;
+    left: calc(100% - 24px);
+    transform: translate(-50%, -50%);
+    transition: filter ease 200ms;
+}
+img.icon:not(#eye-closed, #eye-open) {
+    filter: opacity(0.50);
+}
+img.icon:not(.signup-password img.icon) {
+    pointer-events: none;
+}
+.signup-password img.icon{
+    cursor: pointer;
+}
+img#eye{
+    width: 20px;   
+    filter: opacity(0.5);
+}
+/* #eye-closed{
+    filter: opacity(0);
+} */
+.signup-fname{
+     position: relative;
+     grid-column: 1 / span 1;
+}
+.signup-lname{
+    position: relative;
+    grid-column: 2 / span 1;
+}
+.signup-email{
+    position: relative;
+    grid-column: 1 / span 2;
+}
+.signup-password{
+    position: relative;
+    grid-column: 1 / span 2;
+}
+.sign-up-form button{
+    margin-top: 16px;
+    font-size: var(--n-s);
+    letter-spacing: 2.4px;
+    padding: 12px 28px;
+    outline: none;
+    overflow: hidden;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--teal);
+    cursor: pointer;
+}
+.sign-up-form form p{
+    margin-top: 16px;
+    align-self: center;
+}
+.error {
+    font-size: var(--t-s);
+    opacity: 0;
+    position: absolute;
+    top: 115%;
+    left: 4%;
+    color: var(--yellow);
+    transition: opacity ease 200ms;
+}
+.error::before {
+    content: "\26A0";
+    margin-right: 6px;
+}
