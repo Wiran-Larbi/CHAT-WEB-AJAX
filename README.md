@@ -20,6 +20,12 @@ This is a solution that i designed and developed by my self Wiran Larbi, it's a 
   The Idea of building a chat web app always fascinate me ,and always seemed to me like a hard think to do, and in fact it is in some how there is some details thati missed there and some features wasn't clear how i could add using the technoligies that i know, but even tho i did a good job putting the idea from my head to the real world .
   
 ## Screenshot
+  INDEX AND LOGIN
+  ![ssager preview](https://github.com/Wiran-Larbi/CHAT-WEB-AJAX/blob/main/design/ssager-design-1.png)
+  ![ssager preview](https://github.com/Wiran-Larbi/CHAT-WEB-AJAX/blob/main/design/ssager-design-2.png)
+
+  
+  INTERIOR OF THE APP
 ![ssager preview](https://github.com/Wiran-Larbi/CHAT-WEB-AJAX/blob/main/design/ssager-design-6.png)
 
 
