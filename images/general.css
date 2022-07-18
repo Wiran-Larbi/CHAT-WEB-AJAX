@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;900&display=swap');
+
+/*! The Style Guide For The App */
+:root{
+  
+    /** ## Font   **/
+    --family : 'Montserrat', sans-serif;
+     /*? Size  */
+     --t-s : 14px;
+     --n-s : 18px;
+     --m-s : 24px;
+     --xl-s: 36px;
+     --b-s : 42px;
+     --h-s : 48px;
+     --v-s : 52px;
+     /*? Weight  */
+     --t-w : 200;
+     --n-w : 300;
+     --m-w : 500;
+     --b-w : 700;
+     --h-w : 900;
+
+    /** ## Colors   **/
+    /*? Primary */
+     --white : hsl(0, 0%, 100%);
+     --dark : hsl(228, 12%, 8%);
+     --l-dark : hsl(0, 0%, 13%);
+     --g-dark : hsl(233, 4%, 36%);
+     --l-g-dark: hsl(233, 4%,12%);
+     --blue : hsl(233, 81%, 10%);
+    /*? Secondary */
+     --teal : #00c298;
+     --i-dark : hsl(0, 0%, 13%);
+     --yellow : #e7cd6f;
+     --bg-btn: rgb(0,194,152);
+     --bg-gradient:linear-gradient(65deg, rgba(0,194,152,1) 0%, rgba(231,205,111,1) 100%);
+    /*? Image URL */
+    --space-bg: "space-galaxy-background.jpg";
+ 
+
+}
+
+*,*::before,*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body{
+    font-family: var(--family);
+    background-color: var(--dark);
+    color: var(--white);
+
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+.link{
+    color: var(--white);
+    font-family: var(--family);
+    font-size: var(--t-s);
+    font-weight: var(--n-w);
+    text-decoration: none;
+    transition: color 180ms ease-in, border 140ms ease-in;
+}
+
+::placeholder{
+    font-family: var(--family);
+    font-size: var(--t-s);
+    letter-spacing: 1.05px;
+    color: hsl(0, 0%, 72%);
+}
+.input{
+    font-size: var(--n-s);
+    letter-spacing: 2.4px;
+    color: var(--teal);
+  
+  
+    padding: 18px 28px;
+    text-align: left;
+    background-color: var(--l-g-dark);
+    outline: none;
+    overflow: hidden;
+    border: none;
+    border-radius: 4px;
+}
+.icon{
+   width: 24px;
+}
+
+.floating-label{
+    position: absolute;
+    font-size: var(--n-s);
+    font-weight: var(--t-w);
+    opacity: 0.75;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    transition: transform ease 140ms,font-size ease-out 120ms,position ease 140ms;
+    user-select: none;
+    pointer-events: none;
+}
+input.input:focus ~ .floating-label,
+input.input:not(:focus):valid ~ .floating-label{
+    font-size: 10px;
+    transform: translateY(-180%);
+    left: 24px;
+}
+.floating-label{
+    position: absolute;
+    font-size: var(--n-s);
+    font-weight: var(--t-w);
+    opacity: 0.75;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    transition: transform ease 140ms,font-size ease-out 120ms,position ease 140ms;
+    user-select: none;
+    pointer-events: none;
+}
+input.input:focus ~ .floating-label,
+input.input:not(:focus):valid ~ .floating-label{
+    font-size: 10px;
+    transform: translateY(-180%);
+    left: 24px;
+}
+/* ! Animations  */
+
+
+@keyframes float {
+	0% {
+		
+		transform: translatey(0px);
+	}
+	50% {
+		
+		transform: translatey(-20px);
+	}
+	100% {
+		
+		transform: translatey(0px);
+	}
+}
+
+
+@keyframes float-left {
+	0% {
+		
+		transform: translatey(-80px);
+	}
+	50% {
+		
+		transform: translatey(-50px);
+	}
+	100% {
+		
+		transform: translatey(-80px);
+	}
+}
+
+@keyframes float-right {
+	0% {
+		
+		transform: translatey(-320px);
+	}
+	50% {
+		
+		transform: translatey(-280px);
+	}
+	100% {
+		
+		transform: translatey(-330px);
+	}
+}
+
+.hide{
+    opacity: 0;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer a{
+    color: var(--g-dark);
+}
