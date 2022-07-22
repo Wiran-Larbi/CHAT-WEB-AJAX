@@ -56,6 +56,9 @@ The Major Challenge with chat app is asynchronous grabbing of data from the data
 - CSS Variables
 - Vanilla Javascript
 - AJAX
+- JSON
+- XML
+- Asynchronous Calls
 - JQUERY
 - PHP
 - PHPMyAdmin
